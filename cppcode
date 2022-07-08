@@ -1,0 +1,781 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    /*
+    cout<<"hello world"<<endl;
+
+    int a=10;
+    cout<< a << endl;
+
+    char ch= 'a';
+    cout << ch << endl;
+
+    double b = 1.34;
+    cout << b << endl;
+
+    float f = 0.1;
+    cout << f << endl;
+
+    bool c = true;
+    cout << c << endl;
+
+    int size = sizeof(a);
+    cout<<"size of c is: "<< size<<endl;
+
+
+   float a=2.0/5;
+    cout<<a<<endl;
+
+
+    int a = 5;
+    int b = 4;
+
+    bool first = a == b;
+    cout << first << endl;
+
+    bool second = a > b;
+    cout << second << endl;
+
+    bool third = a < b;
+    cout << third << endl;
+
+    bool fourth = a >= b;
+    cout << fourth << endl;
+
+    bool fifth = a <= b;
+    cout << fifth << endl;
+
+    bool sixth = a != b;
+    cout << sixth << endl;
+
+
+ bool a=3;
+ cout<<!a<<endl;
+
+*/
+
+    /*
+    if else statements
+
+    problem: input a number and state wheather the number is postive or negative or 0
+
+
+int a;
+    cout << "enter number: " << endl;
+    cin >> a;
+
+    if (a == 0)
+        {
+            cout << "entered number is neigher positive nor negative" << endl;
+        }
+    else if (a > 0)
+        {
+            cout << "entered number is positive" << endl;
+        }
+
+    else
+        {
+            cout << "entered number is negative" << endl;
+        }
+
+    problem: input two numbers and tell which is bigger number
+
+
+    int a,b;
+    cout<<"enter first number and second number: "<<endl;
+    cin>>a;
+
+    if(a>b)
+    {
+        cout<<"first number is bigger"<<endl;
+
+    }
+    else
+    {
+        cout<<"second number is bigger"<<endl;
+    }
+
+problem: tell input is uppercase letter, lower case letter or number 
+  
+
+char d;
+cout<<"Enter data: ";
+cin>>d;
+int data=d;
+
+if (97<=data)
+{
+    cout<<"Entered data is in lowercase "<<endl;
+}
+else if (65<=data)
+{
+    cout<<"Entered data is in uppercase "<<endl;
+
+}
+else if(48<=data)
+{
+    cout<<"data is number "<<endl;
+}
+   
+ looping:
+ while loop:  
+ problem: print numbers from 1 to n
+   
+ 
+
+int n;
+cout<<"Enter number: "<<endl;
+cin>>n;
+int i=1;
+while(i<=n)
+{
+    cout<<i<<endl;
+    i=i+1;
+}
+
+problem: input n, add all numbers till n
+ 
+
+int n;
+cout<<"Enter the number: "<<endl;
+cin>>n;
+int i=1;
+int sum=0;
+while(i<=n)
+{
+    sum=sum+i;
+    i=i+1;
+}
+cout<<"sum of all numbers till n is: "<<sum<<endl;
+ 
+
+problem: sum of all even numbers till n
+
+
+int n;
+cout<<"enter number: ";
+cin>>n;
+
+int i=1;
+int sum=0;
+while(i<n)
+{
+    sum=sum+i;
+    i=i+2;
+}
+
+cout<<"sum of all even numbers till n is: "<<sum<<endl;
+
+problem: fibonachi number till n
+
+
+
+int n;
+cout<<"enter number: ";
+cin>>n;
+int i=1;
+int a=0;
+int b=1;
+cout<<a<<endl;
+cout<<b<<endl;
+
+while(i<=n-2)
+{
+
+    
+  int c=a+b;
+  a=b;
+    b=c;
+    cout<<c<<endl;
+    i=i+1;
+
+}
+
+
+pattern 1:
+int n;
+    cout<<"enter n: ";
+    cin>>n;
+    int i=1;
+    
+
+
+    while(i<=n)
+    {
+        int j=1;
+        while(j<=n)
+        {
+            cout<<"*";
+            j=j+1;
+        }
+        cout<<endl;
+        i=i+1;
+    }
+
+pattern 2: 
+1 1 1
+2 2 2
+3 3 3
+
+
+int n;
+cout<<"enter n: ";
+cin>>n;
+
+int i=1;
+
+while(i<=n)
+{
+    int j=1;
+    while(j<=n)
+    {
+        cout<<i<<" ";
+        j=j+1;
+    }
+
+    i=i+1;
+    cout<<endl;
+}
+
+
+pattern 3:
+1234
+1234
+1234
+1234
+
+
+int n;
+cout<<"enter number: "<<endl;
+cin>>n;
+
+int i=1;
+
+
+while(i<=n)
+{
+    int j=1;
+
+    while(j<=n)
+    {
+        cout<<j<<" ";
+        j=j+1;
+    }
+    i=i+1;
+    cout<<endl;
+}
+
+
+int n;
+cout<<"Enter Number: ";
+cin>>n;
+
+int i=1;
+
+while(i<=n)
+{
+    int j=0;
+    while(j<n)
+    {
+        cout<<n-j<<" ";
+        j=j+1;
+    }
+    i=i+1;
+    cout<<endl;
+}
+
+
+pattern: 
+123
+456
+789
+
+
+int n;
+cout<<"Enter Number: ";
+cin>>n;
+
+int i=1;
+int count =1;
+while(i<=n)
+{
+    int j=1;
+    while(j<=n)
+    {
+        cout<<count<<" ";
+        count=count+1;
+        j=j+1;
+    }
+    i=i+1;
+    cout<<endl;
+}
+
+pattern:
+*
+**
+***
+****
+
+
+int n;
+cout<<"Enter Number: ";
+cin>>n;
+
+int i=1;
+
+while(i<=n)
+{
+    int j=1;
+    while(j<=i)
+    {
+        cout<<"* ";
+        j=j+1;
+    }
+    i=i+1;
+    cout<<endl;
+}
+
+
+pattern: 
+1
+22
+333
+4444
+
+int n;
+cout<<"Enter Number: ";
+cin>>n;
+
+int i=1;
+
+while(i<=n)
+{
+    int j=1;
+    while(j<=i)
+    {
+        cout<<i<<" ";
+        j=j+1;
+    }
+    i=i+1;
+    cout<<endl;
+}
+
+
+pattern:
+1
+23
+456
+78910
+
+int n;
+cout<<"Enter Number: ";
+cin>>n;
+int i= 1;
+int count=1;
+while(i<=n)
+{
+    int j=1;
+    while(j<=i)
+    {
+        cout<<count;
+        count=count+1;
+        j=j+1;
+    }
+    cout<<endl;
+    i=i+1;
+
+}
+
+pattern: 
+1
+23
+345
+4567
+56789
+
+
+int n;
+cout<<"enter number: ";
+cin>>n;
+
+int i=1;
+
+while(i<=n)
+{
+    int j=1;
+    while(j<=i)
+    {
+        cout<<i-j+1;
+        j=j+1;
+
+    }
+    i=i+1;
+    cout<<endl;
+
+    pattern:
+    A A A
+    B B B 
+    C C C 
+
+
+int n;
+cout<<"Enter number of colomns: ";
+cin>>n;
+int i=1;
+char ch='A';
+while(i<=n)
+{
+    int j=1;
+    while(j<=n)
+    {
+        cout<<char(ch+i-1)<<" ";
+        j=j+1;
+    }
+    i=i+1;
+    cout<<endl;
+}
+
+
+    pattern:
+    A A A
+    B B B 
+    C C C 
+
+
+int n;
+cout<<"Enter number of colomns: ";
+cin>>n;
+int i=1;
+char ch='A';
+while(i<=n)
+{
+    int j=1;
+    while(j<=n)
+    {
+        cout<<char(ch+j-1)<<" ";
+        j=j+1;
+    }
+    i=i+1;
+    cout<<endl;
+}
+
+pattern: 
+A B C
+D E F 
+G H I
+
+
+int n;
+cin>>n;
+int i=1;
+char ch='A';
+while(i<=n)
+{
+    int j=1;
+    while(j<=n)
+    {
+        cout<<ch<<" ";
+        ch=ch+1;
+        j=j+1;
+    }
+    i=i+1;
+    cout<<endl;
+}
+
+pattern:
+A B C 
+B C D
+C D E
+
+int n;
+cin>>n;
+int i=1;
+while(i<=n)
+{
+    int j=1;
+    while(j<=n)
+    {
+        cout<<char('A'+i+j-2)<<" ";
+        j=j+1;
+    }
+    i=i+1;
+
+    cout<<endl;
+}
+
+pattern:
+
+
+int n;
+cout<<"Number: ";
+cin>>n;
+
+int i=1;
+char ch='A';
+while(i<=n)
+{
+    
+    int j=1;
+    while(j<=i)
+    {
+        cout<<ch;
+        ch=ch+1;
+        j=j+1;
+    }
+    i=i+1;
+    cout<<endl;
+
+}
+
+pattern:
+
+int n;
+cout<<"Number: ";
+cin>>n;
+
+int i=1;
+
+while(i<=n)
+{
+    
+    int j=1;
+    while(j<=i)
+    {
+        cout<<char('A'+i+j-2);
+        
+        j=j+1;
+    }
+    i=i+1;
+    cout<<endl;
+
+}
+
+
+pattern:
+D
+C D
+B C D
+A B C D
+
+
+
+int n;
+cout<<"Number: ";
+cin>>n;
+
+int i=1;
+while(i<=n)
+{
+    int j=1;
+    char start='A'+n-i;
+    while(j<=i)
+    {
+        cout<<start;
+        start=start+1;
+        j=j+1;
+    }
+    i=i+1;
+    cout<<endl;
+}
+
+pattern:
+    *
+   **
+  ***
+ ****
+*****
+
+
+int n;
+cout<<"Enter no of coloumn: ";
+cin>>n;
+
+int i=1;
+while(i<=n)
+{
+    //spaces print karlo
+    int space=n-i; 
+    while(space)
+    {
+        cout<<" ";
+        space=space-1;
+
+    }
+    // stars print karlo
+    int j=1;
+    while(j<=i)
+    {
+        cout<<"*";
+        j=j+1;
+    }
+    i=i+1;
+    cout<<endl;
+}
+
+
+pattern: 
+****
+***
+**
+*
+
+
+int n;
+cin>>n;
+
+int i=1;
+while(i<=n)
+{
+    int j=1;
+    while(j<=n-i+1)
+    {
+        cout<<"*";
+        j=j+1;
+    }
+    i=i+1;
+    cout<<endl;
+}
+
+pattern:
+****
+ ***
+  **
+   *
+  
+
+int n;
+cin>>n;
+
+int i=1;
+while(i<=n)
+{
+    //spaces print karlo
+    int space=i-1;
+    while(space)
+    {
+        cout<<" ";
+        space=space-1;
+    }
+
+    // stars print karlo
+    int k=1;
+    while(k<=n-i+1)
+    {
+        cout<<"*";
+        k=k+1;
+    }
+    i=i+1;
+    cout<<endl;
+}
+
+pattern: 
+     1
+    121
+   12321
+
+
+int n;
+cin>>n;
+
+int i=1;
+while(i<=n)
+{
+    //print spaces (1st triangle)
+    int j=1;
+    while(j<=n-i)
+    {
+        cout<<" ";
+        j=j+1;
+    }
+
+
+    //print 2nd triangle
+    int k=1;
+    int p=1;
+    while(k<=i)
+    {
+        cout<<p;
+        p=p+1;
+        k=k+1;
+    }
+
+
+    //print 3rd triangle
+    int l=1;
+    int s=i-1;
+    while(l<=i-1)
+    {
+        cout<<s;
+        s=s-1;
+        l=l+1;
+    }
+
+i=i+1;
+cout<<endl;
+
+
+}
+
+
+
+dabang pattern:
+1234554321
+1234**4321
+123****321
+12******21
+1********1
+
+
+*/
+
+int n;
+cin>>n;
+
+int i=1;
+while(i<=n)
+{
+    //print first triangle
+    int j=1;
+
+    while(j<=n-i+1)
+    {
+        cout<<j;
+        j=j+1;
+    }
+    // print second triangle (star)
+    int k=1;
+    while(k<=i-1)
+    {
+        cout<<"*";
+        k=k+1;
+    }
+    // print third triangle
+    int l=1;
+    while(l<=i-1)
+    {
+        cout<<"*";
+        l=l+1;
+    }
+
+    //print fourth triangle
+    int ch=n-i+1;
+    int m=1;
+    while(m<=ch)
+    {
+        cout<<ch;
+        ch=ch-1;
+    }
+
+
+
+
+
+i=i+1;
+cout<<endl;
+    
+}
+
+
+}
